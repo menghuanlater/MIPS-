@@ -1,6 +1,6 @@
 #the program is used as memorize 0~255 matrix
 .data
-	useless:.space 4092
+	useless:.space 4096
 	data:.word 0:256
 .text
 	li $s0,16 #$s0 use as rows' number
@@ -16,7 +16,7 @@ for_row_begin:
 	nop
 
 	la $a0,data
-	add $t3,$t3,$t1
+	add $t3,$zero,$t1
 	sll $t3,$t3,2
 	addu $a0,$a0,$t3
 
